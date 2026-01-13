@@ -1,0 +1,67 @@
+name: psu_smart_app
+description: "A new Flutter project for PSU Smart Application."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0' 
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ---------------------------------------
+  # 🎨 UI & Icons (ส่วนแสดงผล)
+  # ---------------------------------------
+  cupertino_icons: ^1.0.2       # ไอคอนสไตล์ iOS
+  shimmer: ^3.0.0               # เอฟเฟกต์แสงวิ่งวิบวับ (ใช้ในหน้าบัตร)
+  carousel_slider: ^5.0.0       # ภาพสไลด์ (Banner ข่าว)
+  intl: ^0.20.2                 # จัดการรูปแบบวันที่และเวลา
+
+  # ---------------------------------------
+  # 📷 Media & Files (จัดการรูป/วิดีโอ)
+  # ---------------------------------------
+  image_picker: ^1.0.7          # เลือกรูปจากแกลเลอรี/กล้อง
+  image_cropper: ^8.0.2         # 🔥 แก้เป็นเวอร์ชันใหม่แล้ว (แก้ Error Build Failed)
+  video_player: ^2.8.2          # เล่นวิดีโอ
+  chewie: ^1.7.5                # ตัวควบคุมวิดีโอ (Video UI)
+  youtube_player_flutter: ^9.0.1 # เล่น Youtube
+
+  # ---------------------------------------
+  # 🔗 Network & Data (การเชื่อมต่อ)
+  # ---------------------------------------
+  http: ^1.1.0                  # ยิง API (ดึงสภาพอากาศ)
+  url_launcher: ^6.2.5          # เปิดลิ้งค์เว็บภายนอก/โทรออก
+  webview_flutter: ^4.10.0      # แสดงเว็บในแอป (WebView)
+  shared_preferences: ^2.2.2    # บันทึกข้อมูลในเครื่อง (เก็บรูปโปรไฟล์)
+  path_provider: ^2.1.2         # หาที่เก็บไฟล์ในเครื่อง
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  
+  # 📱 App Icon Generator
+  flutter_launcher_icons: "^0.13.1"
+
+# ==========================================
+# 🛠️ Configuration (ตั้งค่าเพิ่มเติม)
+# ==========================================
+flutter:
+  uses-material-design: true
+  
+  # ประกาศโฟลเดอร์รูปภาพ
+  assets:
+    - assets/images/
+    - assets/images/logos/
+    - assets/images/news/
+
+# ตั้งค่าโลโก้แอป (Launcher Icon)
+flutter_launcher_icons:
+  android: "ic_launcher"
+  ios: true
+  image_path: "assets/images/psu_app_logo.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/images/psu_app_logo.png"
